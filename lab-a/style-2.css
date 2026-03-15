@@ -274,9 +274,9 @@ footer {
 }
 
 /* ========== OBRAZY TŁA ========== */
-.karta-intro   { background-image: url('assets/style-2-assets/intro.png'); }
-.karta-push    { background-image: url('assets/style-2-assets/push.png'); }
-.karta-legs    { background-image: url('assets/style-2-assets/legs.png'); }
-.karta-tips    { background-image: url('assets/style-2-assets/tips.png'); }
-.karta-food    { background-image: url('assets/style-2-assets/food.png'); }
-.karta-summary { background-image: url('assets/style-2-assets/summary.png'); }
+.karta-intro   { background-image: url('style-2-assets/intro.png'); }
+.karta-push    { background-image: url('style-2-assets/push.png'); }
+.karta-legs    { background-image: url('style-2-assets/legs.png'); }
+.karta-tips    { background-image: url('style-2-assets/tips.png'); }
+.karta-food    { background-image: url('style-2-assets/food.png'); }
+.karta-summary { background-image: url('style-2-assets/summary.png'); }

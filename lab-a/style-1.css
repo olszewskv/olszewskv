@@ -240,9 +240,9 @@ footer {
 }
 
 /* ========== OBRAZY TŁA ========== */
-.karta-intro   { background-image: url('assets/style-1-assets/intro.png'); }
-.karta-push    { background-image: url('assets/style-1-assets/push.png'); }
-.karta-legs    { background-image: url('assets/style-1-assets/legs.png'); }
-.karta-tips    { background-image: url('assets/style-1-assets/tips.png'); }
-.karta-food    { background-image: url('assets/style-1-assets/food.png'); }
-.karta-summary { background-image: url('assets/style-1-assets/summary.png'); }
+.karta-intro   { background-image: url('style-1-assets/intro.png'); }
+.karta-push    { background-image: url('style-1-assets/push.png'); }
+.karta-legs    { background-image: url('style-1-assets/legs.png'); }
+.karta-tips    { background-image: url('style-1-assets/tips.png'); }
+.karta-food    { background-image: url('style-1-assets/food.png'); }
+.karta-summary { background-image: url('style-1-assets/summary.png'); }
