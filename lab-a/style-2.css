@@ -1,3 +1,282 @@
-body {
-  background-color: #ecfbe6;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* ========== RESET ========== */
+/* Reset ustawia wszystkie elementy na box-sizing:
+border-box, co oznacza, że padding i border są wliczane w szerokość/wysokość */
+* {
+  box-sizing: border-box; /* Wlicza padding i border w rozmiary */
+  margin: 0; /* Usuwa domyślne marginesy */
+  padding: 0; /* Usuwa domyślne paddingi */
 }
+
+/* ========== BODY ========== */
+body {
+  background-color: #111111; /* Ciemne tło */
+  font-family: 'Roboto Condensed', Arial, sans-serif; /* Czcionka z Google Fonts */
+  color: #eeeeee; /* Jasny kolor tekstu */
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: #1a1a1a; /* Ciemniejsze tło */
+  border-bottom: 4px solid #e63000; /* Czerwona ramka na dole */
+  padding: 0 48px; /* Odstępy */
+  display: flex; /* Flexbox dla układu */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  justify-content: space-between; /* Rozłożenie elementów */
+  gap: 32px; /* Odstęp między elementami */
+  min-height: 80px; /* Minimalna wysokość */
+}
+
+header h1 {
+  font-family: 'Bebas Neue', Arial, sans-serif; /* Specjalna czcionka */
+  color: #ffffff; /* Biały kolor */
+  font-size: 38px; /* Rozmiar */
+  letter-spacing: 4px; /* Odstęp między literami */
+  text-transform: uppercase; /* Wielkie litery */
+}
+
+header p {
+  color: #e63000; /* Czerwony kolor */
+  font-size: 12px; /* Mały rozmiar */
+  text-transform: uppercase; /* Wielkie litery */
+  letter-spacing: 2px; /* Odstęp */
+  margin: 0; /* Bez marginesu */
+}
+
+/* ========== Lista nawigacyjna ========== */
+.ul-1 {
+  list-style: none; /* Bez kropek */
+  display: flex; /* Flexbox */
+  justify-content: flex-end; /* Po prawej */
+  gap: 0; /* Bez odstępu */
+  padding: 0; /* Bez paddingu */
+  margin: 0; /* Bez marginesu */
+  font-size: 15px; /* Rozmiar czcionki */
+}
+
+.ul-1 li {
+  color: #eeeeee; /* Kolor tekstu */
+  padding: 8px 20px; /* Odstępy */
+  cursor: pointer; /* Kursor */
+  text-transform: uppercase; /* Wielkie litery */
+  letter-spacing: 2px; /* Odstęp */
+  border-bottom: 3px solid transparent; /* Przejrzysta ramka */
+  transition: color 0.2s, border-color 0.2s; /* Płynne przejścia */
+}
+
+.ul-1 li:hover {
+  color: #e63000; /* Zmiana koloru na hover */
+  border-bottom: 3px solid #e63000; /* Czerwona ramka na hover */
+}
+
+/* ========== MAIN ========== */
+main {
+  width: 100%; /* Pełna szerokość */
+  padding: 0; /* Bez paddingu */
+}
+
+/* ========== KARTY ========== */
+/* Pełnoekranowe sekcje z obrazami tła */
+.karta {
+  position: relative; /* Pozycjonowanie względne */
+  width: 100%; /* Pełna szerokość */
+  min-height: 100vh; /* Wysokość na cały ekran */
+  display: flex; /* Flexbox */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  background-size: cover; /* Pokrycie obrazu */
+  background-position: center; /* Wyśrodkowanie */
+  border-bottom: 4px solid #e63000; /* Czerwona ramka */
+  overflow: hidden; /* Ukrywa nadmiar */
+}
+
+.karta-duza {
+  min-height: 100vh; /* Pełny ekran */
+}
+
+.karta-tresc {
+  position: relative; /* Pozycjonowanie */
+  padding: 64px 80px; /* Duże odstępy */
+  max-width: 700px; /* Maks szerokość */
+  background: rgba(0,0,0,0.6); /* Półprzezroczyste tło */
+}
+
+.karta-tresc h2 {
+  font-family: 'Bebas Neue', Arial, sans-serif; /* Specjalna czcionka */
+  color: #ffffff; /* Biały */
+  font-size: 72px; /* Duży rozmiar */
+  line-height: 1; /* Jedna linia */
+  letter-spacing: 6px; /* Odstęp liter */
+  text-transform: uppercase; /* Wielkie litery */
+  margin-bottom: 16px; /* Odstęp */
+}
+
+.karta-tresc h3 {
+  border-bottom: 2px solid #e63000; /* Dolna ramka */
+  padding-bottom: 6px; /* Odstęp od ramki */
+  color: #e63000; /* Czerwony */
+  margin: 24px 0 12px 0; /* Marginesy */
+  font-size: 20px; /* Rozmiar */
+  text-transform: uppercase; /* Wielkie litery */
+  letter-spacing: 3px; /* Odstęp */
+}
+
+.karta-tresc p {
+  color: #bbbbbb; /* Szary */
+  padding: 0 0 0 16px; /* Lewy padding */
+  font-size: 16px; /* Rozmiar */
+  margin: 0 0 16px 0; /* Margines */
+  border-left: 3px solid #444444; /* Lewa ramka */
+  max-width: 520px; /* Maks szerokość */
+  line-height: 1.7; /* Wysokość linii */
+}
+
+/* ========== GRID KART ========== */
+.karta-grid {
+  display: block; /* Blokowy układ */
+}
+
+/* ========== LISTY W KARTACH ========== */
+.karta-tresc ul,
+.karta-tresc ol {
+  list-style: none; /* Bez domyślnych stylów */
+  max-width: 520px; /* Maks szerokość */
+  margin: 0; /* Bez marginesu */
+  padding: 0; /* Bez paddingu */
+  border-left: 5px solid #e63000; /* Lewa ramka */
+}
+
+.karta-tresc ul li,
+.karta-tresc ol li {
+  padding: 12px 20px; /* Odstępy */
+  border-bottom: 1px solid #2a2a2a; /* Dolna ramka */
+  background: rgba(0, 0, 0, 0.6); /* Tło */
+  font-size: 16px; /* Rozmiar */
+  color: #eeeeee; /* Kolor */
+  text-transform: uppercase; /* Wielkie litery */
+  letter-spacing: 1px; /* Odstęp */
+}
+
+.karta-tresc ul li:last-child,
+.karta-tresc ol li:last-child {
+  border-bottom: none; /* Bez ramki na ostatnim */
+}
+
+.ol-korzysci  li::before {
+  content: counter(list-item) '. '; /* Numeracja */
+  font-weight: 700; /* Pogrubienie */
+  color: #e63000; /* Kolor */
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #0a0a0a; /* Bardzo ciemne tło */
+  color: #888888; /* Szary tekst */
+  padding: 64px 80px; /* Odstępy */
+  border-top: 4px solid #e63000; /* Górna ramka */
+}
+
+.footer-grid {
+  display: flex; /* Flexbox */
+  justify-content: space-between; /* Rozłożenie */
+  flex-wrap: wrap; /* Zawijanie */
+  gap: 48px; /* Odstęp */
+  max-width: 1200px; /* Maks szerokość */
+  margin: 0 auto; /* Centrowanie */
+}
+
+.footer-sekcja {
+  flex: 1; /* Równy podział */
+  min-width: 250px; /* Min szerokość */
+}
+
+.footer-sekcja h3 {
+  font-family: 'Bebas Neue', Arial, sans-serif; /* Specjalna czcionka */
+  color: #ffffff; /* Biały */
+  border-bottom: 2px solid #e63000; /* Dolna ramka */
+  padding-bottom: 8px; /* Odstęp */
+  margin-bottom: 16px; /* Odstęp */
+  font-size: 24px; /* Rozmiar */
+  letter-spacing: 3px; /* Odstęp */
+  text-transform: uppercase; /* Wielkie litery */
+}
+
+.footer-sekcja p {
+  color: #666666; /* Szary */
+  font-size: 14px; /* Rozmiar */
+  margin: 6px 0; /* Margines */
+  line-height: 1.7; /* Wysokość linii */
+}
+
+.ul-footer {
+  list-style: none; /* Bez kropek */
+  padding: 0; /* Bez paddingu */
+  margin: 0; /* Bez marginesu */
+}
+
+.ul-footer li {
+  color: #666666; /* Kolor */
+  font-size: 14px; /* Rozmiar */
+  padding: 8px 0; /* Odstępy */
+  border-bottom: 1px solid #1e1e1e; /* Dolna ramka */
+  cursor: pointer; /* Kursor */
+  text-transform: uppercase; /* Wielkie litery */
+  letter-spacing: 1px; /* Odstęp */
+  transition: color 0.2s; /* Przejście */
+}
+
+.ul-footer li:hover {
+  color: #e63000; /* Zmiana na hover */
+}
+
+/* ========== RESPONSYWNOŚĆ ========== */
+/* Style dla małych ekranów */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Pionowo */
+    align-items: flex-start; /* Po lewej */
+    padding: 16px 20px; /* Mniejsze odstępy */
+    gap: 8px; /* Mniejszy odstęp */
+  }
+
+  header h1 {
+    font-size: 28px; /* Mniejszy tytuł */
+  }
+
+  header p {
+    display: none; /* Ukryj opis */
+  }
+
+  .ul-1 {
+    justify-content: flex-start; /* Po lewej */
+  }
+
+  .ul-1 li {
+    font-size: 13px; /* Mniejsza czcionka */
+    padding: 6px 10px; /* Mniejsze odstępy */
+  }
+
+  .karta-tresc {
+    padding: 40px 24px; /* Mniejsze odstępy */
+  }
+
+  .karta-tresc h2 {
+    font-size: 48px; /* Mniejszy tytuł */
+  }
+
+  .footer-grid {
+    flex-direction: column; /* Pionowo */
+  }
+
+  footer {
+    padding: 40px 24px; /* Mniejsze odstępy */
+  }
+}
+
+/* ========== OBRAZY TŁA ========== */
+.karta-intro   { background-image: url('assets/style-2-assets/intro.png'); }
+.karta-push    { background-image: url('assets/style-2-assets/push.png'); }
+.karta-legs    { background-image: url('assets/style-2-assets/legs.png'); }
+.karta-tips    { background-image: url('assets/style-2-assets/tips.png'); }
+.karta-food    { background-image: url('assets/style-2-assets/food.png'); }
+.karta-summary { background-image: url('assets/style-2-assets/summary.png'); }

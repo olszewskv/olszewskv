@@ -1,3 +1,248 @@
-body {
-  background-color: #dfecff;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* ========== RESET ========== */
+/* Reset ustawia wszystkie elementy na box-sizing:
+border-box, co oznacza, że padding i border są wliczane w szerokość/wysokość */
+* {
+  box-sizing: border-box; /* Wlicza padding i border w rozmiary */
+  margin: 0; /* Usuwa domyślne marginesy */
+  padding: 0; /* Usuwa domyślne paddingi */
 }
+
+/* ========== BODY ========== */
+body {
+  background: #e8f4f8; /* Prosty jednolity kolor tła zamiast gradientu */
+  font-family: 'Poppins', Arial, sans-serif; /* Czcionka z Google Fonts, z fallbackiem */
+  color: #3a3a3a; /* Kolor tekstu */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Cień tekstu dla efektu */
+}
+
+/* ========== HEADER ========== */
+header {
+  background: #756AB6; /* Kolor tła nagłówka */
+  padding: 32px 48px; /* Wewnętrzne odstępy */
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+header h1 {
+  color: white; /* Kolor tytułu */
+  font-size: 48px; /* Rozmiar czcionki */
+  margin-bottom: 12px; /* Odstęp poniżej */
+}
+
+header p {
+  color: rgba(255, 255, 255, 0.85); /* Półprzezroczysty biały */
+  font-size: 16px; /* Rozmiar czcionki */
+  margin: 0 auto 24px auto; /* Centrowanie i odstęp */
+}
+
+/* ========== Lista nawigacyjna  ========== */
+.ul-1 {
+  list-style: none; /* Usuwa kropki z listy */
+  display: flex; /* Używa Flexbox do układu poziomego */
+  justify-content: center; /* Wyśrodkowuje elementy */
+  gap: 16px; /* Odstęp między elementami */
+  font-size: 18px; /* Rozmiar czcionki */
+  padding: 0; /* Usuwa padding */
+  margin: 0; /* Usuwa margines */
+}
+
+.ul-1 li {
+  background-color: rgba(255, 255, 255, 0.25); /* Półprzezroczyste tło */
+  color: white; /* Kolor tekstu */
+  padding: 10px 24px; /* Wewnętrzne odstępy */
+  border-radius: 20px; /* Zaokrąglone rogi */
+  cursor: pointer; /* Kursor myszki */
+  transition: background-color 0.2s; /* Płynne przejście koloru */
+}
+
+.ul-1 li:hover {
+  background-color: rgba(255, 255, 255, 0.45); /* Zmiana koloru na hover */
+}
+
+/* ========== MAIN ========== */
+main {
+  max-width: 1200px; /* Maksymalna szerokość */
+  margin: 0 auto; /* Centrowanie */
+  padding: 48px 24px; /* Odstępy */
+}
+
+/* ========== KARTY ========== */
+/* Karty z obrazami tła */
+.karta {
+  border-radius: 24px; /* Zaokrąglone rogi */
+  overflow: hidden; /* Ukrywa nadmiar */
+  background-size: cover; /* Pokrywa całą kartę */
+  background-position: center; /* Wyśrodkowanie obrazu */
+  min-height: 350px; /* Minimalna wysokość */
+  display: flex; /* Flexbox dla układu */
+  align-items: flex-end; /* Treść na dole */
+}
+
+.karta-duza {
+  width: 100%; /* Pełna szerokość */
+  min-height: 420px; /* Większa wysokość */
+  margin-bottom: 24px; /* Odstęp poniżej */
+}
+
+.karta-tresc {
+  padding: 28px 32px; /* Wewnętrzne odstępy */
+  width: 100%; /* Pełna szerokość */
+  background: rgba(117, 106, 182, 0.3); /* Półprzezroczyste tło */
+}
+
+.karta-tresc h2 {
+  color: white; /* Kolor tytułu */
+  font-size: 24px; /* Rozmiar */
+  margin-bottom: 12px; /* Odstęp */
+}
+
+.karta-tresc h3 {
+  border-left: 4px solid #7ec4cf; /* Lewa ramka */
+  padding-left: 12px; /* Odstęp od ramki */
+  color: rgba(255, 255, 255, 0.9); /* Kolor */
+  margin: 16px 0 8px 0; /* Marginesy */
+  font-size: 18px; /* Rozmiar */
+}
+
+.karta-tresc p {
+  background: rgba(255, 255, 255, 0.15); /* Tło akapitu */
+  color: white; /* Kolor tekstu */
+  border-radius: 12px; /* Zaokrąglone rogi */
+  padding: 12px 16px; /* Odstępy */
+  font-size: 15px; /* Rozmiar */
+  margin: 0 0 12px 0; /* Margines */
+}
+
+/* ========== GRID KART ========== */
+/* Siatka kart używająca Flexbox */
+.karta-grid {
+  display: flex; /* Flexbox */
+  flex-wrap: wrap; /* Zawijanie wierszy */
+  gap: 24px; /* Odstęp między kartami */
+  margin-bottom: 24px; /* Odstęp poniżej */
+}
+
+.karta-grid .karta {
+  width: calc(50% - 12px); /* Dwie kolumny z odstępem */
+}
+
+/* ========== LISTY W KARTACH ========== */
+.karta-tresc ul,
+.karta-tresc ol {
+  list-style: none; /* Bez domyślnych kropek/liczb */
+  margin: 0; /* Bez marginesu */
+  padding: 0; /* Bez paddingu */
+}
+
+.karta-tresc ul li,
+.karta-tresc ol li {
+  padding: 10px 16px; /* Wewnętrzne odstępy */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Dolna ramka */
+  background: rgba(255, 255, 255, 0.12); /* Tło */
+  font-size: 15px; /* Rozmiar czcionki */
+  color: white; /* Kolor tekstu */
+}
+
+.karta-tresc ul li:last-child,
+.karta-tresc ol li:last-child {
+  border-bottom: none; /* Bez ramki na ostatnim */
+}
+
+.ul-cwiczenia li::before { content: '🏋️ '; } /* Emoji przed ćwiczeniami */
+.ul-posilki   li::before { content: '🍽️ '; } /* Emoji przed posiłkami */
+.ol-korzysci  li::before {
+  content: counter(list-item) '. '; /* Numeracja */
+  font-weight: 700; /* Pogrubienie */
+  color: #7ec4cf; /* Kolor */
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #2e2e2e; /* Tło */
+  color: #cccccc; /* Kolor tekstu */
+  padding: 48px 24px; /* Odstępy */
+  margin-top: 60px; /* Odstęp od góry */
+}
+
+.footer-grid {
+  display: flex; /* Flexbox dla sekcji */
+  justify-content: space-between; /* Rozłożenie */
+  flex-wrap: wrap; /* Zawijanie */
+  gap: 32px; /* Odstęp */
+  max-width: 1200px; /* Maks szerokość */
+  margin: 0 auto; /* Centrowanie */
+}
+
+.footer-sekcja {
+  flex: 1; /* Równy podział */
+  min-width: 200px; /* Min szerokość */
+}
+
+.footer-sekcja h3 {
+  color: #7ec4cf; /* Kolor tytułu */
+  border-left: 3px solid #756AB6; /* Lewa ramka */
+  padding-left: 10px; /* Odstęp */
+  margin-bottom: 12px; /* Odstęp */
+  font-size: 16px; /* Rozmiar */
+}
+
+.footer-sekcja p {
+  color: #aaaaaa; /* Kolor tekstu */
+  font-size: 14px; /* Rozmiar */
+  margin: 4px 0; /* Margines */
+}
+
+.ul-footer {
+  list-style: none; /* Bez kropek */
+  padding: 0; /* Bez paddingu */
+  margin: 0; /* Bez marginesu */
+}
+
+.ul-footer li {
+  color: #aaaaaa; /* Kolor */
+  font-size: 14px; /* Rozmiar */
+  padding: 4px 0; /* Odstępy */
+  cursor: pointer; /* Kursor */
+}
+
+.ul-footer li:hover {
+  color: #7ec4cf; /* Zmiana na hover */
+}
+
+/* ========== RESPONSYWNOŚĆ ========== */
+/* Style dla małych ekranów */
+@media (max-width: 768px) {
+  header {
+    padding: 24px 16px; /* Mniejsze odstępy */
+  }
+
+  header h1 {
+    font-size: 32px; /* Mniejszy tytuł */
+  }
+
+  .ul-1 {
+    gap: 10px; /* Mniejszy odstęp */
+    font-size: 15px; /* Mniejsza czcionka */
+  }
+
+  .karta-grid .karta {
+    width: 100%; /* Jedna kolumna */
+  }
+
+  .footer-grid {
+    flex-direction: column; /* Pionowo */
+  }
+
+  footer {
+    padding: 32px 16px; /* Mniejsze odstępy */
+  }
+}
+
+/* ========== OBRAZY TŁA ========== */
+.karta-intro   { background-image: url('assets/style-1-assets/intro.png'); }
+.karta-push    { background-image: url('assets/style-1-assets/push.png'); }
+.karta-legs    { background-image: url('assets/style-1-assets/legs.png'); }
+.karta-tips    { background-image: url('assets/style-1-assets/tips.png'); }
+.karta-food    { background-image: url('assets/style-1-assets/food.png'); }
+.karta-summary { background-image: url('assets/style-1-assets/summary.png'); }
