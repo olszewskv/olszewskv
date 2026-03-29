@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imie Nazwisko (00000) - PTW LAB B</title>
+    <title>Szymon Olszewski (57850) - PTW LAB B</title>
 
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>TO DO LIST <img id="h2-img" src="assets/to-do-list.png" alt="to do icon"></h2>
 
+            <div class="input-row">
+                <input type="text"
+                       id="search-box"
+                       placeholder="Search a task...">
+            </div>
+
+            <ul id="tasks-container">
+                <li>
+                    <span>Task1</span>
+                    <button class="delete-btn">X</button>
+                </li>
+                <li>
+                    <span>Task2</span>
+                    <button class="delete-btn">X</button>
+                </li>
+                <li>
+                    <span>Task3</span>
+                    <button class="delete-btn">X</button>
+                </li>
+            </ul>
+
+            <div class="input-row">
+                <input type="text"
+                       id="add-box"
+                       placeholder="Add a task..."
+                       minlength="3"
+                       maxlength="255"
+                       required>
+                <input type="date"
+                       id="date-box"
+                       min="2026-03-29">
+                <button id="add-btn" type="submit">Add</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
