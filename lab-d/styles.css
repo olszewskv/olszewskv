@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e5e7eb;
+  background: #0b1020;
+  padding: 18px 12px 34px;
+}
+
+#search-box,
+#weather-result {
+  width: min(880px, 100%);
+  margin: 0 auto;
+}
+
+@media (min-width: 860px) {
+  body {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 22px;
+  }
+
+  #search-box,
+  #weather-result {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+#search-box {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+}
+
+#search-box h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+#city-input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e5e7eb;
+  outline: none;
+}
+
+#city-input::placeholder { color: rgba(229, 231, 235, 0.55); }
+
+#city-input:focus {
+  border-color: rgba(34, 211, 238, 0.65);
+}
+
+#search-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  color: #061018;
+  font-weight: 700;
+  background: #22d3ee;
+}
+
+#search-button:hover { filter: brightness(1.05); }
+
+#weather-result { margin-top: 14px; }
+@media (min-width: 860px) { #weather-result { margin-top: 0; } }
+
+#weather-block,
+.weather-block {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 8px;
+  align-items: center;
+}
+
+.weather-date {
+  grid-column: 1 / -1;
+  color: rgba(229, 231, 235, 0.72);
+  font-weight: 650;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.weather-temp {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.weather-temp-feels-like {
+  color: rgba(229, 231, 235, 0.86);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.weather-description {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgba(229, 231, 235, 0.92);
+}
+
+.weather-icon {
+  width: 92px;
+  height: 92px;
+  justify-self: end;
+}
+
+@media (max-width: 520px) {
+  #weather-block,
+  .weather-block { grid-template-columns: 1fr; }
+  .weather-icon { justify-self: start; width: 82px; height: 82px; }
+}
