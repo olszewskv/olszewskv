@@ -38,6 +38,37 @@ switch ($action) {
         $controller = new \App\Controller\PostController();
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
+
+    case 'user-index':
+        $controller = new \App\Controller\UserController();
+        $view = $controller->indexAction($templating, $router);
+        break;
+    case 'user-create':
+        $controller = new \App\Controller\UserController();
+        $view = $controller->createAction($_REQUEST['user'] ?? null, $templating, $router);
+        break;
+    case 'user-edit':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\UserController();
+        $view = $controller->editAction($_REQUEST['id'], $_REQUEST['user'] ?? null, $templating, $router);
+        break;
+    case 'user-show':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\UserController();
+        $view = $controller->showAction($_REQUEST['id'], $templating, $router);
+        break;
+    case 'user-delete':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\UserController();
+        $view = $controller->deleteAction($_REQUEST['id'], $router);
+        break;
+
     case 'info':
         $controller = new \App\Controller\InfoController();
         $view = $controller->infoAction();
