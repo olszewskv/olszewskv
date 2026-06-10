@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+<main class="box">
+    <h1><%= title %></h1>
+
+    <form action="<%= action %>" method="post">
+        <label for="name">Name</label>
+        <input id="name" name="name" value="<%= user.name || '' %>" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" value="<%= user.email || '' %>" />
+
+        <label for="age">Age</label>
+        <input id="age" name="age" value="<%= user.age || '' %>" />
+
+        <button type="submit">Save</button>
+    </form>
+
+    <% if (user.id) { %>
+        <form action="/users/<%= user.id %>/delete" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    <% } %>
+
+    <p><a href="/users">Back</a></p>
+</main>
+</body>
+</html>
+
